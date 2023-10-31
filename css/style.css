@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales para pantallas de escritorio (min-width: 769px) */
+@media (min-width: 769px) {
+    .menu a img {
+        width: 100px;
+    }
+
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+}
+
+header h1 {
+    color: rgb(201, 129, 219);
+    font-size: 60px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+}
+
+/* Alineación del menú de navegación a la derecha */
+header {
+    text-align: right;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+/* MAIN */
+.welcome h2 {
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-image: url("../img/sonrisa1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para pantallas más pequeñas (teléfono celular) */
+/* Estilos específicos para pantallas móviles */
+@media (max-width: 768px) {
+    /* Establece el diseño con grids en pantallas móviles */
+    .welcome {
+        width: 80%;
+        margin: 0 auto;
+        color: black;
+        font-size: 11px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 200px 400px;
+        gap: 20px;
+    }
+
+
+    .welcome .header {
+        grid-area: 1 / 1 / 2 / 3;
+        background-color: #f0f0f0;
+        text-align: center;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .welcome .content {
+        grid-area: 2 / 2 / 3 / 3;
+        background-color: #e0e0e0;
+        padding: 20px;
+    }
+
+    /* Estilos específicos para pantallas móviles */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .welcome h2 {
+        font-size: 36px;
+    }
+
+    /* Hacer las imágenes responsivas en pantallas móviles */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Resto de tus estilos CSS */
+
+
+.why h2,
+h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+.why div img {
+    align-items: self-end;
+}
+
+.specialist {
+    background-color: rgb(255, 255, 255);
+}
+
+.specialist h2 {
+    text-align: center;
+}
+
+.why img,
+.specialist img {
+    margin: 0 auto;
+    /* 0 en la parte superior e inferior y 'auto' en los lados para centrar horizontalmente */
+    display: block;
+    /* Esto asegura que el margen 'auto' funcione correctamente */
+}
+
+/* FOOTER */
+footer .pie {
+    color: pink;
+}
+
+.specialist {
+    background-color: antiquewhite;
+}
