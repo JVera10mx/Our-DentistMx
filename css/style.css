@@ -1,28 +1,32 @@
+/* Importación de fuentes desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 
-/* RESET */
+/* RESET: Reemplaza los valores predeterminados de margen y relleno */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* Estilos generales para pantallas de escritorio (min-width: 769px) */
+/* Estilos generales para pantallas de escritorio (más grandes de 768px) */
 @media (min-width: 769px) {
+    /* Ajustar el tamaño de las imágenes en la barra de navegación */
     .menu a img {
         width: 100px;
     }
 
+    /* Asegurarse de que las imágenes se ajusten dentro de su contenedor */
     img {
         max-width: 50%;
         height: auto;
     }
 }
 
+/* Configuración de fuente global para el cuerpo del sitio */
 body {
     font-family: "Raleway", sans-serif;
 }
 
-/* HEADER */
+/* Estilos del HEADER (encabezado) */
 header {
     background-color: rgb(255, 255, 255);
     padding: 10px;
@@ -34,6 +38,7 @@ header {
     grid-area: header;
 }
 
+/* Estilos para el título principal (h1) en el encabezado */
 header h1 {
     color: rgb(201, 129, 219);
     font-size: 60px;
@@ -48,31 +53,36 @@ header {
     text-align: right;
 }
 
+/* Estilos para la lista no ordenada dentro del menú de navegación */
 header nav ul {
     list-style: none;
     padding: 0;
 }
 
+/* Estilos para los elementos de la lista en el menú de navegación */
 header nav ul li {
     display: inline-block;
     margin-right: 20px;
 }
 
+/* Elimina el margen derecho del último elemento de la lista */
 header nav ul li:last-child {
     margin-right: 0;
 }
 
+/* Elimina el subrayado de los enlaces en el menú de navegación */
 header nav ul li a {
     text-decoration: none;
 }
 
-/* MAIN */
+/* Estilos para la sección de bienvenida */
 .welcome h2 {
     color: white;
     text-align: center;
     width: 100%;
     height: 500px;
     background-image: url("../img/sonrisa1.jpg");
+    background-color: rgba(255, 255, 255, 0.3);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -82,10 +92,20 @@ header nav ul li a {
     align-items: center;
 }
 
-/* Estilos para pantallas más pequeñas (teléfono celular) */
-/* Estilos específicos para pantallas móviles */
+/* Estilos para el texto "Sonrisa" en la sección de bienvenida */
+.sonrisa {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 38px;
+    backdrop-filter: blur(0.5px);
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Estilos para pantallas más pequeñas (menos de 768px, como teléfonos móviles) */
 @media (max-width: 768px) {
-    /* Establece el diseño con grids en pantallas móviles */
+    /* Establecer el diseño con grids en pantallas móviles */
     .welcome {
         width: 80%;
         margin: 0 auto;
@@ -98,7 +118,9 @@ header nav ul li a {
         gap: 20px;
     }
 
+    
 
+    /* Estilos para la cabecera de la sección de bienvenida en pantallas móviles */
     .welcome .header {
         grid-area: 1 / 1 / 2 / 3;
         background-color: #f0f0f0;
@@ -109,27 +131,47 @@ header nav ul li a {
         align-items: center;
     }
 
+    /* Estilos para el contenido de la sección de bienvenida en pantallas móviles */
     .welcome .content {
         grid-area: 2 / 2 / 3 / 3;
         background-color: #e0e0e0;
         padding: 20px;
     }
 
-    /* Estilos específicos para pantallas móviles */
+    /* Cambiar la dirección de la flexbox del encabezado a "column" en pantallas móviles */
     header {
         flex-direction: column;
         text-align: center;
     }
 
+    /* Ajustar el tamaño de la fuente para el título en pantallas móviles */
     header h1 {
-        font-size: 36px;
+        font-size: 26px;
     }
 
+    /* Mover el botón del menú a la esquina superior izquierda */
+    .menu {
+        position: relative;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .navbar-nav {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+    }
+
+    /* Ajustar los elementos de la lista en el menú de navegación en pantallas móviles */
     header nav ul li {
         display: block;
         margin: 10px 0;
     }
 
+    /* Aumentar el tamaño del texto en la sección de bienvenida en pantallas móviles */
     .welcome h2 {
         font-size: 36px;
     }
@@ -139,10 +181,22 @@ header nav ul li a {
         max-width: 100%;
         height: auto;
     }
+
+    /* Utilizando una clase adicional en el contenedor del menú */
+@media (max-width: 768px) {
+    .menu.special-menu {
+        position: relative;
+    }
+
+    .menu.special-menu .navbar-toggler {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
 }
 
-/* Resto de tus estilos CSS */
 
+}
 
 .why h2,
 h3 {
@@ -167,7 +221,7 @@ h3 {
     margin: 0 auto;
     /* 0 en la parte superior e inferior y 'auto' en los lados para centrar horizontalmente */
     display: block;
-    /* Esto asegura que el margen 'auto' funcione correctamente */
+    /* Asegura que el margen 'auto' funcione correctamente */
 }
 
 /* FOOTER */
