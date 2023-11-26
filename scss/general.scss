@@ -1,0 +1,446 @@
+/* Importación de fuentes desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+/* RESET: Reemplaza los valores predeterminados de margen y relleno */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+$primary-color: #3498db;
+$secondary-color: #9b59b6;
+$background-color: #f8f8f8;
+$text-color: #333;
+$white-color: #fff;
+$gray-color: #555;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+/* Tamaños de Fuente */
+$font-size-h1: 2rem;
+$font-size-h2: 3rem;
+$font-size-h3: 1.8rem;
+$font-size-p: 1.5rem;
+
+/* Estilos generales */
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+/* Estilos del HEADER (encabezado) */
+header {
+  background-color: $white-color;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px $shadow-color;
+
+  h1 {
+    color: $text-color;
+    font-size: 2rem;
+    font-family: "Lucida Sans", sans-serif;
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      li {
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para la sección de bienvenida */
+.welcome {
+  background: url("../img/sonrisa1.jpg") center/cover fixed;
+  color: $white-color;
+  text-align: center;
+  padding: 100px 0;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+
+    .sonrisa {
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 38px;
+      backdrop-filter: blur(0.5px);
+      border: solid 1px rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      width: 50%;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+/* Estilos para la sección "Cómo Funciona" */
+.how-it-works {
+    text-align: center;
+  
+    h2 {
+      font-size: $font-size-h2;
+      margin-bottom: 20px;
+      color: $text-color;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 20px;
+        color: $gray-color;
+  
+        h3 {
+          font-size: $font-size-h3;
+          margin-bottom: 10px;
+          color: $text-color;
+        }
+  
+        p {
+          font-size: $font-size-p;
+          color: $gray-color;
+        }
+      }
+    }
+  }
+  
+  .find-dentist {
+    text-align: center;
+  }
+  
+/* Estilos para pantallas más pequeñas (menos de 1075px) */
+@media (max-width: 1075px) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "logo"
+      "nav";
+
+    h1 {
+      grid-area: logo;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      grid-area: nav;
+      text-align: center;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        li {
+          margin: 10px 0;
+
+          a {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .welcome {
+    padding: 50px 0;
+
+    h2 {
+      font-size: 2.5rem;
+
+      .sonrisa {
+        height: 30px;
+        font-size: 1rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .why,
+  .specialist,
+  .find-dentist {
+    padding: 40px 0;
+
+    h2,
+    h3 {
+      font-size: 2rem;
+    }
+
+    div {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/* Estilos para pantallas más pequeñas (menos de 570px) */
+@media (max-width: 570px) {
+  header {
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      ul {
+        li {
+          a {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .welcome {
+    padding: 30px 0;
+
+    h2 {
+      font-size: 2rem;
+
+      .sonrisa {
+        height: 25px;
+        font-size: 0.9rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .why,
+  .specialist,
+  .find-dentist {
+    padding: 30px 0;
+
+    h2,
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    div {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/* Estilos para la sección "why" */
+.why {
+  text-align: center;
+  padding: 80px 0;
+
+  h2,
+  h3 {
+    margin: 20px 0;
+    color: $text-color;
+  }
+
+  div {
+    img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px $shadow-color;
+    }
+  }
+}
+
+/* Estilos para la sección "specialist" */
+.specialist {
+  background-color: $white-color;
+  padding: 80px 0;
+  color: $text-color;
+
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: $text-color;
+  }
+
+  p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px $shadow-color;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: $text-color;
+  }
+}
+
+/* Estilos adicionales para la página "Soy Doctor" y "Soy Paciente" */
+.registration-form {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: $white-color;
+  box-shadow: 0 2px 5px $shadow-color;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: $text-color;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: $gray-color;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 10px;
+      color: $text-color;
+    }
+  }
+
+  fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    legend {
+      font-size: 1.8rem;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: $gray-color;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: $primary-color;
+      color: $white-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+/* Estilos adicionales para la página "Soy Paciente" */
+.find-dentist {
+  background-color: $white-color;
+  padding: 80px 0;
+  color: $text-color;
+
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: $text-color;
+  }
+
+  p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px $shadow-color;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: $text-color;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: $text-color;
+  padding: 30px 0;
+  color: $white-color;
+  text-align: center;
+
+  img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

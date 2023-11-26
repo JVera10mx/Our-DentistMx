@@ -8,6 +8,7 @@
   box-sizing: border-box; }
 
 /* Variables */
+/* Tamaños de Fuente */
 /* Estilos generales */
 body {
   font-family: "Raleway", sans-serif;
@@ -69,6 +70,30 @@ header {
     font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto; }
+
+/* Estilos para la sección "Cómo Funciona" */
+.how-it-works {
+  text-align: center; }
+  .how-it-works h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333; }
+  .how-it-works ul {
+    list-style: none;
+    padding: 0; }
+    .how-it-works ul li {
+      margin-bottom: 20px;
+      color: #555; }
+      .how-it-works ul li h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #333; }
+      .how-it-works ul li p {
+        font-size: 1.5rem;
+        color: #555; }
+
+.find-dentist {
+  text-align: center; }
 
 /* Estilos para pantallas más pequeñas (menos de 1075px) */
 @media (max-width: 1075px) {
@@ -274,3 +299,79 @@ footer {
     transition: transform 0.3s ease; }
     footer img:hover {
       transform: scale(1.2); }
+
+/* Variables */
+/* Estilos para la página de registro de pacientes */
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f8f8f8;
+  color: #333; }
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+  header h1 {
+    color: #333;
+    font-size: 2rem;
+    font-family: "Lucida Sans", sans-serif;
+    font-style: italic;
+    font-weight: 100; }
+
+.registration-form {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; }
+  .registration-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; }
+  .registration-form p {
+    font-size: 1.5rem;
+    color: #555; }
+  .registration-form form {
+    display: grid;
+    gap: 20px; }
+    .registration-form form fieldset {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px; }
+      .registration-form form fieldset legend {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 10px; }
+      .registration-form form fieldset label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555; }
+      .registration-form form fieldset input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem; }
+    .registration-form form input[type="submit"] {
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease; }
+      .registration-form form input[type="submit"]:hover {
+        background-color: #217dbb; }
+
+footer {
+  background-color: #333;
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+  border-top: 2px solid #555; }
+  footer p {
+    font-size: 1rem; }
